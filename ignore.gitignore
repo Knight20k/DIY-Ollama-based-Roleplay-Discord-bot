@@ -1,0 +1,4 @@
+token.txt
+app_id.txt
+__pycache__/
+*.log
