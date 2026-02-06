@@ -9,38 +9,40 @@ They can talk to other bots too!
 
 ✨ Key Features:
 
-*   **Persistent Emotional Memory:** The bot's mood and personality evolve based on your interactions. These emotions are saved locally, so it remembers you even after a crash or power outage.
-*   **True Privacy:** Uses SHA-256 encryption tied to your bot token. Only you can read your history files.
-*   **Smart Context Management:** Supports separate conversation histories for every User, Channel, and DM.
-*   **Flexible Activation:** Responds to its name, pings, and mentions, or works exclusively in specific channels (`/activate`).
-*   **User Commands:** Includes a `/reset` command to wipe chat history and start fresh (per-user/per-channel), `/activate` to allow auto-replies in a channel, and `/deactive` desiables auto-replies in a chennel.
-*   **Hardware Efficient:** Tested and confirmed to run smoothly on mid-range hardware (tested on an AMD RX 580 and 24GB RAM).
+    *   **Persistent Emotional Memory:** The bot's mood and personality evolve based on your interactions. These emotions are saved locally, so it remembers you even after a crash or power outage.
+    *   **True Privacy:** Uses SHA-256 encryption tied to your bot token. Only you can read your history files.
+    *   **Smart Context Management:** Supports separate conversation histories for every User, Channel, and DM.
+    *   **Flexible Activation:** Responds to its name, pings, and mentions, or works exclusively in specific channels (`/activate`).
+    *   **User Commands:** Includes a `/reset` command to wipe chat history and start fresh (per-user/per-channel), `/activate` to allow auto-replies in a channel, and `/deactive` desiables auto-replies in a chennel.
+    *   **Hardware Efficient:** Tested and confirmed to run smoothly on mid-range hardware (tested on an AMD RX 580 and 24GB RAM).
 
 🎭 Interaction & Behavior:
 The bot is designed to act as a "Human User" rather than a robotic assistant.
 
-*   **Activation:** The bot listens for its name (as configured in `bot.py`), replies, and direct `@mentions` (pings).
-*   **Mood & Tone:** Responses are dictated by its current memory state. If you are rude, the bot will remember; if you are kind, it will reciprocate.
-*   **DM Support:** The bot can engage in private DMs. (Note: Outgoing DM initiation is a protected feature that requires manual configuration in the source code and no i will not say how).
-*   **Memory Reset:** As stated above, use `/reset` in any channel or DM to clear the context for that specific conversation, only clears the chat history for the user who used it and in that channel.
+    *   **Activation:** The bot listens for its name (as configured in `bot.py`), replies, and direct `@mentions` (pings).
+    *   **Mood & Tone:** Responses are dictated by its current memory state. If you are rude, the bot will remember; if you are kind, it will reciprocate.
+    *   **DM Support:** The bot can engage in private DMs. (Note: Outgoing DM initiation is a protected feature that requires manual configuration in the source code and no i will not say how).
+    *   **Memory Reset:** As stated above, use `/reset` in any channel or DM to clear the context for that specific conversation, only clears the chat history for the user who used it and in that channel.
 
 
 Requirements:
 1. Software
 
     Ollama Server: The backend engine for running LLM models. [Download from its repository:](https://github.com/ollama)
+   
     Python 3.8+: The language powering the bot. [Download that here:](https://www.python.org/downloads/)
 
-2. Dependencies:
+3. Dependencies:
 
     Install the required libraries via [pip:](https://pip.pypa.io/en/stable/)
     (in a terminal or powershell): pip install discord.py aiohttp
 
 
-3. required Files:
+4. required Files:
     You will need to download from this repository:
-    bot.py
-    conversation_handler.py
+   
+       bot.py
+       conversation_handler.py
 
 
 Setup Instructions:
@@ -57,9 +59,9 @@ Open bot.py in a text editor (like notepad++ or an IDE of your choice, but notep
     *(change any other internal variables you have here, like mood stuff or command prefixes).*
 
 2: Discord Authentication:
-
-    For the bot to connect to your server, create two local text files in the root directory. ⚠️ WARNING: NEVER SHARE THESE FILES OR UPLOAD THEM TO GITHUB OR ANYWHERE!
+    For the bot to connect to your server, you need to create two local text files in the root directory. ⚠️ **WARNING: NEVER SHARE THESE FILES OR UPLOAD THEM TO GITHUB OR ANYWHERE!**
     you need to make thses:
+    
     token.txt: Your Discord Bot Token (found in the Discord Developer Portal), copy token and paste into a text file named "token.txt", without the quotes, spacings, or any symbols.
     app_id.txt: Your Discord Application ID (found in the Discord Developer Portal), copy APP ID and paste into a text file named "app_id", without the quotes, spacings, or any symbols.
 
@@ -107,6 +109,7 @@ The current version is strictly a high-end text roleplay experience. If you woul
 *   **AI Responses:** This bot utilizes third-party models via Ollama. The developer of this bot script is not responsible for the content generated by the AI.
 *   **Safe for RP:** While the default model has built-in safeguards, users should ensure their chosen models comply with Discord's [Terms of Service](https://discord.com) and [Community Guidelines](https://discord.com).
 *   **Hardware:** Running LLMs locally can generate high heat. Monitor your hardware temperatures during extended sessions.
+
 
 
 
